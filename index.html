@@ -1,0 +1,47 @@
+<!DOCTYPE html
+<html lang="pt-br">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>LOGIN</title>
+		<link rel="stylesheet" href="./style.css" />
+		
+		<style>
+		body {
+		background-image: url(IMG/image.jpg);
+		background-size: cover;
+		}
+		</style>
+</head>
+<body>
+
+	<div class="login">
+		<div class="login1">
+			<h1>LOGIN</h1>
+			<input id="usuario"type="text" name="usuario" placeholder="@ usuario @"/>
+			</br></br>
+			<input id="senha"type="password" name="senha" placeholder="@ senha @"/>
+			</br></br>
+			<button onclick="botao(); return false" class="botao">ENTRAR</button>
+			
+				<script>
+					function botao() {
+						var login = document.getElementById('usuario').value;
+						var senha = document.getElementById('senha').value;
+						
+						if(login == "Modmax" && senha == "12345") {
+							alert('Sucesso');
+							location.href = "hacks.html";
+						}else {
+							alert('Usuario ou senha incorretos');
+						}
+					}
+				</script>
+				
+		</div>	
+	</div>
+	
+</body>
+</html>
