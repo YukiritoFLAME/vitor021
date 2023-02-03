@@ -1,0 +1,157 @@
+<!DOCTYPE html
+<html lang="pt-br">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MODMAX</title>
+		<link rel="stylesheet" href="./CSS/MOBILE.style.css" />
+		<link rel="stylesheet" href="./CSS/TABLET.style.css" />
+		<link rel="stylesheet" href="./CSS/PC.style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		<style scoped>
+		body {
+		background-image: url(IMG/image.jpg);
+		background-size: cover;
+		font-family: Roboto , Arial , Helvetica , sans-serif;
+		}
+		
+		.login {
+		width: 260px;
+		height: 360px;
+		background-color: #a5b7d9; 
+		border-radius: 15px; 
+		border: none;
+		
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate( -55%, -47%);
+		rotate: 4deg;
+		opacity: .4;
+		}
+		
+		.login-rel {
+		width: 260px;
+		height: 350px;
+		background-color: #a5b7d9; 
+		border-radius: 15px; 
+		border: none;
+			
+		position: relative;
+		left: 50%;
+		top: 50%;
+		transform: translate( -50%, -50%);
+		}
+		
+		.login-abs {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate( -50%, -55%);
+		}
+		
+		.login-h1 {
+		margin-left: 20%;
+		font-size: 45px;
+		color: white;
+		padding: 40px 0px;
+		}
+		
+		#usuario , #senha {
+		background-color: #243b55;
+		color: white;
+		border: none;
+		border-radius: 10px;
+		padding: 10px;
+		text-align: center;
+		outline: none;
+		
+		width: 200px;
+		height: 40px;
+		}
+		
+		.button {
+		width: 100%;
+		padding-top: 5%;
+		background-color: #243b55; 
+		border-radius: 10px;
+		text-decoration: none;
+		color: #cdcdcd;
+		border: none;
+		text-align: center;
+		padding: 10px;
+		}
+		
+		.button:hover {
+		background-color: #141e30;
+		transition: .3s;
+		color: white;
+		cursor: pointer;
+		}
+		
+		.social {
+		font-size: 27px;
+		margin-top: 11px;
+		display: flex;
+		margin-left: 30px;
+		}
+		
+		.social a {
+		padding: 0px 10px;
+		cursor: pointer;
+		}
+		
+		.social i {
+		color: #243b55;
+		}
+		
+		.or {
+		font-weight: 700;
+		font-size: 15px;
+		color: #243b55;
+		margin-left: 90px;
+		margin-top: 10px;
+		}
+		
+		</style>
+</head>
+<body>
+
+		<div class="login-rel">
+			<div class="login"></div>
+			<div class="login-abs">
+				<h1 class="login-h1" >Login</h1>
+				<input id="usuario" type="text" name="usuario" placeholder="@ usuario @" />
+				</br></br>
+				<input id="senha"type="password" name="senha" placeholder="@ senha @"/>
+				</br></br>
+				<button onclick="botao(); return false" class="button">ENTRAR</button>
+				<div class="or">OR</div>
+				<div class="social">
+				<a href="https://accounts.google.com"><i class="fa-brands fa-google"></i></a>
+				<a href="#"><i class="fa-brands fa-facebook"></i></a>
+				<a href="#"><i class="fa-solid fa-envelope"></i></a>
+				</div>
+				
+					<script>
+						function botao() {
+							var login = document.getElementById('usuario').value;
+							var senha = document.getElementById('senha').value;
+							
+							if(login == "Modmax" && senha == "12345") {
+								alert('Sucesso');
+								location.href = "hacks.html";
+							}else {
+								alert('Usuario ou senha incorretos');
+							}
+						}
+					</script>
+					
+			</div>	
+		</div>
+	
+</body>
+</html>
