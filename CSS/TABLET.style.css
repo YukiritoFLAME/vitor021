@@ -1,0 +1,552 @@
+@media(max-width: 850px) {
+
+* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-family: Arial, Helvetica; sans-serif;
+		color: white;
+		}
+		
+		body {
+		background-image: url("IMG/image.jpg");
+		background-size: cover;
+		}
+		
+		/* M E N U    H A M B U R G U E */
+
+		.menu {
+		margin-left: 30px;
+		margin-top: 30px;
+		}
+		
+		.menu .menu-fake {
+		position: absolute;
+		z-index: 1000;
+		width: 35px;
+		height: 35px;
+		opacity: 0;
+		cursor: pointer;
+		}
+		
+		.menu .menu-lines {
+		position: absolute;
+		z-index: 999;
+		width: 35px;
+		height: 35px;
+		}
+		
+		.menu .menu-lines span {
+		display: block;
+		width: 35px;
+		height: 5px;
+		margin-bottom: 10px;
+		background-color: white;
+		border-radius: 3px;
+		transition: all ease .2s;
+		}
+		
+		.menu .menu-fake:checked ~ .menu-lines span:nth-child(1){
+		transform-origin: 0% 0%;
+		transform: rotate(45deg) scale(1.25);
+		}
+		
+		.menu .menu-fake:checked ~ .menu-lines span:nth-child(2){
+		opacity: 0;
+		}
+		
+		.menu .menu-fake:checked ~ .menu-lines span:nth-child(3){
+		transform-origin: 0% 100%;
+		transform: rotate(-45deg) scale(1.25);
+		
+		}
+		
+		.menu ul {
+		position: absolute;
+		z-index: 998;
+		left: 0;
+		top: 0;
+		padding-top: 10px;
+		width: 300px;
+		background-color: #232323;
+		height: 100%;
+		margin-left: -300px;
+		transition: all ease .2s;
+		}
+		
+		.menu .menu-fake:checked ~ ul {
+		margin-left: 0;
+		}
+		
+		.divisoria {
+		color: aqua;
+		user-select: none;
+		}
+		
+		.divisoria1 {
+		color: red;
+		user-select: none;
+		}
+		
+		#vip {
+		color: white;
+		}
+		
+		#vip:hover {
+		color: red;
+		}
+		
+		.menu ul li {
+		position: relative;
+		padding: 10px 30px;
+		top: 60px;
+		}
+		
+		.menu ul li a {
+		text-decoration: none;
+		color: white;
+		font-size: 22px;
+		transition: all ease .3s;
+		}
+		
+		.menu ul li a:hover {
+		color: aqua;
+		}
+		
+		/* L O G I N */
+		
+
+		
+		/* T O G G L E */
+		
+		.toggle {
+		display: none;
+		}
+		
+		.toggle + label {
+		width: 32px;
+		height: 20px;
+		background: black;
+		display: block;
+		position: relative;
+		border-radius: 20px;
+		padding: 2px;
+		transition: 200ms;
+		cursor: pointer;
+		}
+		
+		.toggle + label:before {
+		content: ' ';
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background: white;
+		display: block;
+		border-radius: 50%;
+		right: unset;
+		left: 2px;
+		top: 2px;
+		transition: 200ms;
+		}
+		
+		.toggle:checked + label {
+		background: blue;
+		}
+		
+		.toggle:checked +label:before {
+		content: ' ';
+		left: calc(100% - 22px);
+		box-shadow: 0 4px 4px rgb(0 0 0/ 10%);
+		}
+		
+		.toggle-relative {
+		position: relative;
+		left: 10%;
+		top: 83%;
+		background-color: white;
+		height: 80px;
+		width: 100px;
+		border: none;
+		border-radius: 15px;
+		}
+		
+		.toggle-absolute {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate( -50%, -50%);
+		color: black;
+		}
+		
+		.toggle-absolute h3 {
+		color: black;
+		}
+		
+		/* N A V B A R */
+		
+		.nav {
+		position: relative;
+		background-color: #232323;
+		height: 16vh;
+		align-items: center;
+		justify-content: space-around;
+		left: 0;
+		top: -30px;
+		transfomr: translate( 0%, 0%);
+		z-index: 0;
+		}
+		
+		.navbar {
+		position: absolute;
+		left: 65%;
+		top: 50%;
+		font-size: 25px;
+		transform: translate( -50%, -50%);
+		}
+		
+		.navbar a {
+		font-size: 16px;
+		user-select: none;
+		}
+		
+		/* J O G O S */
+		
+		.relative {
+		position: relative;
+		left: 50%;
+		top: 50%;	
+		transform: translate( -50%, -110%);
+		width: 100%;
+		height: 320px;
+	}
+	
+	/* F R E E   F I R E */
+	
+	.absolute {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate( -110%, -50%);
+		
+		background-color: #232323;
+		width: 150px;
+		height: 225px;
+		border-radius: 15px;
+	}
+	
+	.absolute h1 {
+	margin-left: 25%;
+	margin-top: 10px;
+	font-size: 16px;
+	}
+	
+	.absolute img {
+	margin-left: 25%;
+	margin-top: 5px;
+	height: 77px; width: 77px;
+	border-radius: 10px;
+	}
+	
+	.freefire-p {
+	padding: 11px 30px;
+	}
+	
+	.absolute p {
+	margin-left: 17%;
+	margin-top: -7px;
+	font-size: 12px;
+	}
+	
+	.absolute button {
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	
+	height: 25px;
+	width: 110px;
+	margin-left: 15%;
+	margin-top: 5px;
+	}
+	
+	.absolute button:hover {
+	background-color: aqua;
+	color: black;
+	cursor: pointer;
+	transition: .3s;
+	}
+	
+	/* M I N E C R A F T */
+	
+	.absolute1 {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate( 10%, -50%);
+		
+		background-color: #232323;
+		width: 150px;
+		height: 225px;
+		border-radius: 15px;
+	}
+	
+	.absolute1 h1 {
+	margin-left: 20%;
+	margin-top: 10px;
+	font-size: 16px;
+	}
+	
+	.minecraft-p {
+	padding: 9px 13px;
+	}
+	
+	.absolute1 p{
+	margin-left: 17%;
+	margin-top: -5px;
+	font-size: 12px;
+	}
+	
+	.absolute1 img {
+	margin-left: 25%;
+	margin-top: 5px;
+	height: 77px; width: 77px;
+	border-radius: 10px;
+	}
+	
+	.absolute1 button {
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	
+	height: 25px;
+	width: 110px;
+	margin-left: 15%;
+	margin-top: 5px;
+	}
+	
+	.absolute1 button:hover {
+	background-color: aqua;
+	color: black;
+	cursor: pointer;
+	transition: .3s;
+	}
+	
+	/* D R E A M   L E G U E   S O C E R   2 3  */
+	
+	.absolute2 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate( 10%, 60%);
+	
+	background-color: #232323;
+	width: 150px;	
+	height: 225px;
+	border-radius: 15px;
+	}
+	
+	.absolute2 h1 {
+	margin-left: 30%;
+	margin-top: 10px;
+	font-size: 16px;
+	}
+	
+	.absolute2 img {
+	margin-left: 23%;
+	margin-top: 5px;
+	height: 77px; width: 77px;
+	border-radius: 10px;
+	}
+	
+	.dls23-p {
+	padding: 9px 28px;
+	}
+	
+	.absolute2 p {
+	margin-left: 15%;
+	margin-top: -5px;
+	font-size: 12px;
+	}
+	
+	.absolute2 button {
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	
+	height: 25px;
+	width: 110px;
+	margin-left: 15%;
+	margin-top: 5px;
+	}
+	
+	.absolute2 button:hover {
+	background-color: aqua;
+	color: black;
+	cursor: pointer;
+	transition: .3s;
+	}
+	
+	/*  S U B W A Y   S U R F  */
+	
+	.absolute3 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate( -110%, 60%);
+	
+	background-color: #232323;
+	width: 150px;	
+	height: 225px;
+	border-radius: 15px;
+	}
+	
+	.absolute3 h1 {
+	margin-left: 15%;
+	margin-top: 10px;
+	font-size: 16px;
+	}
+	
+	.absolute3 img {
+	margin-left: 25%;
+	margin-top: 5px;
+	height: 77px; width: 77px;
+	border-radius: 10px;
+	}
+	
+	.subwaysurf-p {
+	padding: 9px 9px;
+	}
+	
+	.absolute3 p {
+	margin-left: 17%;
+	margin-top: -5px;
+	font-size: 12px;
+	}
+	
+	.absolute3 button {
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	
+	height: 25px;
+	width: 110px;
+	margin-left: 15%;
+	margin-top: 5px;
+	}
+	
+	.absolute3 button:hover {
+	background-color: aqua;
+	color: black;
+	cursor: pointer;
+	transition: .3s;
+	}
+	
+	/*  A P L I C A T I V O  */
+	
+	.absolute-apps {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate( -110%, -50%);
+	
+	background-color: #232323;
+	width: 150px;	
+	height: 225px;
+	border-radius: 15px;
+	}
+	
+	.absolute-apps h1 {
+	margin-left: 25.5%;
+	margin-top: 10px;
+	font-size: 16px;
+	color: white;
+	}
+	
+	.absolute-apps img {
+	margin-left: 25%;
+	margin-top: 5px;
+	height: 74px; width: 77px;
+	border-radius: 10px;
+	}
+	
+	.absolute-apps p {
+	margin-left: 19%;
+	margin-top: 5px;
+	font-size: 12px;
+	color: white;
+	}
+	
+	.absolute-apps button {
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	
+	height: 25px;
+	width: 110px;
+	margin-left: 15%;
+	margin-top: 5px;
+	}
+	
+	.absolute-apps button:hover {
+	background-color: aqua;
+	color: black;
+	cursor: pointer;
+	transition: .3s;
+	}
+	
+	.absolute-apps1 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate( 10%, -50%);
+	
+	background-color: #232323;
+	width: 150px;	
+	height: 225px;
+	border-radius: 15px;
+	}
+	
+	.absolute-apps1 h1 {
+	margin-left: 28%;
+	margin-top: 10px;
+	font-size: 16px;
+	color: white;
+	}
+	
+	.absolute-apps1 img {
+	margin-left: 25%;
+	margin-top: 5px;
+	height: 74px; width: 77px;
+	border-radius: 10px;
+	}
+	
+	.absolute-apps1 p {
+	margin-left: 19%;
+	margin-top: 5px;
+	font-size: 12px;
+	color: white;
+	}
+	
+	.absolute-apps1 button {
+	background-color: blue;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	
+	height: 25px;
+	width: 110px;
+	margin-left: 15%;
+	margin-top: 5px;
+	}
+	
+	.absolute-apps1 button:hover {
+	background-color: aqua;
+	color: black;
+	cursor: pointer;
+	transition: .3s;
+	}
+}
